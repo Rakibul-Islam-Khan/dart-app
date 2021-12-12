@@ -1,21 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { One } from './assets/Components/One';
+import { View} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import Route from './components/Routes/Route';
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <One/>
-    </View>
+    <SafeAreaView style={{flex:1}}>
+      <View style={{flex:1}}>
+        <Route />
+      </View>
+    </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    // // alignItems: 'center',
-    // // justifyContent: 'center',
-  },
-});
